@@ -32,6 +32,10 @@ app.use(
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();});
 
+    app.get("/", (req, res) => {
+        res.send("Welcome")
+    })
+
 
     app.post("/chat", async (req, res) => {
         const { prompt } = req.body;
